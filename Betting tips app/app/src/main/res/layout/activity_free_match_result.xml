@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity2"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.drawerlayout.widget.DrawerLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:openDrawer="end"
+    android:id="@+id/result_drawer_layout"
+   >
+<!--    <LinearLayout-->
+<!--        android:id="@+id/activity_fmr_ll"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical"-->
+<!--        tools:ignore="MissingConstraints"-->
+<!--        >-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".Result"
+        android:background="@color/black">
+        <LinearLayout
+            android:id="@+id/activity_la1nding2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+            <androidx.appcompat.widget.Toolbar
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:minHeight="?attr/actionBarSize"
+                android:background="@color/black"
+                tools:ignore="MissingConstraints">
+                <ImageView
+                    android:id="@+id/fmr_result_back_imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_arrow_back_ios_24"
+                    android:layout_marginRight="16dp"
+                    />
+                <TextView
+                    android:id="@+id/fmr_toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Prime Safe Tips"
+                    android:textColor="@color/md_green_50"
+                    android:textSize="@dimen/abc_text_size_title_material"
+                    android:fontFamily="sans-serif-medium"
+
+                    />
+                <ImageView
+                    android:id="@+id/fmr_result_toggle_imageView"
+                    android:layout_gravity="end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_menu_24"
+                    android:layout_marginRight="16dp"
+                    />
+            </androidx.appcompat.widget.Toolbar>
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/fmr_viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+
+            <LinearLayout
+                android:id="@+id/adView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                >
+            </LinearLayout>
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/fmr_tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tabIndicatorAnimationMode="elastic"
+                app:tabIndicatorColor="@null"
+                app:tabIndicatorGravity="stretch"
+                app:tabMode="fixed"
+                app:tabGravity="fill"
+                app:tabSelectedTextColor="@color/white"
+                app:tabTextColor="@color/md_grey_500"
+                app:tabBackground="@color/black"
+                app:tabIndicator="@drawable/tabindicatorforresult"
+                app:tabIndicatorFullWidth="true"
+                tools:ignore="MissingConstraints">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/md_red_500"
+                    android:text="Free"
+                    />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/md_red_500"
+                    android:text="VIPa" />
+
+            </com.google.android.material.tabs.TabLayout>
+
+
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--   -->
+<!--    </LinearLayout>-->
+<!--    <ProgressBar-->
+<!--        android:id="@+id/ffr_progressBar"-->
+<!--        style="?android:attr/progressBarStyle"-->
+<!--        android:layout_width="20dp"-->
+<!--        android:layout_height="20dp" />-->
+<!--    <TextView-->
+<!--        android:id="@+id/ffr_noConnectiontv"-->
+<!--        style="?android:attr/progressBarStyle"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_marginTop="200dp"-->
+<!--        android:layout_marginBottom="200dp"-->
+<!--        android:layout_marginRight="100dp"-->
+<!--        android:layout_marginLeft="100dp"-->
+<!--        android:text="There is no connection."-->
+<!--        android:textColor="@color/black"-->
+<!--        android:background="@color/md_blue_grey_50"-->
+<!--        android:padding="20dp"-->
+<!--        />-->
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/result_nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:menu="@menu/nav_menu"
+        android:theme="@style/Base.Theme.Betting.NavigationView"
+        app:itemTextColor="@color/black"
+        android:layout_gravity="end"/>
+</androidx.drawerlayout.widget.DrawerLayout>
+    <ProgressBar
+        android:id="@+id/fmra_progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="160dp"
+        android:background="@color/black"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

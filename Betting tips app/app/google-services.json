@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1073033769556",
+    "project_id": "bettingapp-82d6e",
+    "storage_bucket": "bettingapp-82d6e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1073033769556:android:ad68a5cda64dc9cdeab3c1",
+        "android_client_info": {
+          "package_name": "com.example.betting"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLDWbHaPNL55xzM5QHOYt6ZecsvW-EdKU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1073033769556:android:7c13edbb86860e05eab3c1",
+        "android_client_info": {
+          "package_name": "com.shime.betpowersports"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLDWbHaPNL55xzM5QHOYt6ZecsvW-EdKU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/menu_home"
+            android:title="home"
+
+            />
+    </group>
+    <item android:title="Predictions">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/primeSafeTips_nav"
+                    android:title="Prime Safe Tips"
+                    android:visible="false"
+                    />
+                <item
+                    android:id="@+id/daily5Odds_nav"
+                    android:title="Daily 5+ Odds"
+                    android:visible="false"
+                    />
+
+                <item
+                    android:id="@+id/daily1Odds_nav"
+                    android:title="Daily 10+ Odd"
+                    android:visible="false"
+                    />
+
+                <item
+                    android:id="@+id/overUnderTips_nav"
+                    android:title="Over-Under Tips"
+                    android:visible="false"
+                    />
+                <item
+                    android:id="@+id/doubleTips_nav"
+                    android:title="Double Tips"
+                    android:visible="false"
+                    />
+                <item
+                    android:id="@+id/singleGame_nav"
+                    android:title="Single Game"
+                    android:visible="false"
+                    />
+
+                <item
+                    android:id="@+id/bennisTips_nav"
+                    android:title="Tennis Tips"
+                    android:visible="false"
+                    />
+                <item
+                    android:id="@+id/basketball_nav"
+                    android:title="Basketball"
+                    android:visible="false"
+                    />
+                <item
+                    android:id="@+id/eliteVip_nav"
+                    android:title="Elite VIP"
+                    />
+                <item
+                    android:id="@+id/fixedVip_nav"
+                    android:title="Fixed VIP"
+                    />
+                <item
+                    android:id="@+id/overUnderVip_nav"
+                    android:title="Over-Under VIP"
+                    />
+                <item
+                    android:id="@+id/htFtVip_nav"
+                    android:title="HT-FT VIP"
+                    />
+                <item
+                    android:id="@+id/correctScoreVIP_nav"
+                    android:title="Correct Score VIP"
+                    />
+                <item
+                    android:id="@+id/daily50OddsVip_nav"
+                    android:title="Daily 50+ Odds VIP"
+                    />
+                <item
+                    android:id="@+id/primePlusVip_nav"
+                    android:title="Prime Plus VIP"
+                    />
+                <item
+                    android:id="@+id/premiumVip_nav"
+                    android:title="Premium VIP"
+                    />
+            </group>
+        </menu>
+    </item>
+<!--    <item android:title="Pages">-->
+<!--        <menu>-->
+<!--            <group android:checkableBehavior="single">-->
+<!--&lt;!&ndash;                <item&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:id="@+id/privacyPolicy"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:title="Privacy Policy"&ndash;&gt;-->
+<!--&lt;!&ndash;                    />&ndash;&gt;-->
+<!--&lt;!&ndash;                <item&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:id="@+id/TermAndConditions"&ndash;&gt;-->
+<!--&lt;!&ndash;                    android:title="Term And Conditions"&ndash;&gt;-->
+<!--&lt;!&ndash;                    />&ndash;&gt;-->
+
+
+<!--            </group>-->
+<!--        </menu>-->
+<!--    </item>-->
+</menu>

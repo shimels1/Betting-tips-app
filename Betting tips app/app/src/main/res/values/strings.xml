@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name">Bet Power</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="open">Open Navigation Drawer</string>
+    <string name="close">Close Navigation Drawer</string>
+<!--test ad-->
+    <string name="admobAppId">ca-app-pub-3940256099942544~3347511713</string>
+
+    <string name="PrivacyPolicy"><b>Privacy Policy</b>
+        \n  \n This page is intended to inform visitors about my policies regarding the collection, use, and disclosure of Personal Information if they choose to use my Service.
+    \n  \n If you use my Service, you consent to the collection and use of information in accordance with this policy. I collect Personal Information in order to provide and improve the Service. Except as specified in this Privacy Policy, I will not use or share your information with anyone.
+    \n  \n Unless otherwise defined in this Privacy Policy, the terminology used in this Privacy Policy have the same meanings as those in our terminology and Conditions, which may be found at Bet Power Sport.
+\n  \n<b>Information Collection and Use</b>
+        \n  \nUnless otherwise defined in this Privacy Policy, the terminology used in this Privacy Policy have the same meanings as those in our terminology and Conditions, which may be found at Bet Power Sport.
+         \n  \nThe app does make use of third-party services, which may gather information that can be used to identify you.
+\n  \nLink to the privacy policy of third-party service providers used by the app
+\n  \n \t \t\u2022 <a href="https://www.google.com/policies/privacy/">Google Play Services</a>
+\n\t \t\u2022 <a href="https://firebase.google.com/policies/analytics">Google Analytics for Firebase</a>
+\n\t \t\u2022 <a href="https://expo.io/privacy">Expo</a>
+        \n  \n<b>Log Data</b>
+\n  \nI do like to inform you that whenever you use my Service, in the event of an app problem, I collect data and information (via third-party goods) on your phone known as Log Data. This Log Data may contain information such as your devices is Internet Protocol ("IP") address, device name, operating system version, app configuration when using my Service, time and date of use, and other statistics.
+        \n  \n<b>Cookies</b>
+\n  \nCookies are little data files that are widely utilized as anonymous unique identifiers. These are supplied to your browser by websites you visit and kept on your devices internal memory.
+\n  \nThese "cookies" are not specifically used by this Service. The app may, however, use third-party code and libraries that use "cookies" to collect data and improve their services. You have the choice to accept or reject these cookies and to be notified when a cookie is sent to your device. If you opt to reject our cookies, you may be unable to utilize certain features of this Service.
+        \n  \n<b>Service Providers</b>
+\n  \nI may employ third-party companies and persons for the purposes listed below.:
+\n\t \t\u2022To facilitate our Service;
+\n\t \t\u2022To provide the Service on our behalf;
+\n\t \t\u2022To perform Service-related services; or
+\n\t \t\u2022To assist us in analyzing how our Service is used.
+\n\nI do want to notify Service users that these third parties have access to their Personal Information. The reason for this is so that they can complete the responsibilities entrusted to them on our behalf. They are, however, required not to reveal or use the information for any other reason.
+        \n\n<b>Security</b>
+\n\nI appreciate your faith in entrusting us with your Personal Information, thus we strive to employ commercially reasonable measures of protecting it. But keep in mind that no form of internet transmission or electronic storage is 100% secure and trustworthy, and I cannot guarantee its perfect security.
+        \n\n<b>Links to Other Sites</b>
+\n\nThis Service may include connections to other websites. You will be routed to a third-party website if you click on a third-party link. Please keep in mind that these web sites are not run by me. As a result, I strongly suggest you to read the Privacy Policies for these websites. I have no control over, and accept no responsibility for, any third-party website or services content, privacy policies, or practices.
+        \n\n<b>Children’s Privacy</b>
+\n\nThese Services are not intended for children under the age of 18. I do not gather personally identifying information from children under the age of 18. If I learn that a kid under the age of 18 has provided me with personal information, I promptly remove it from our servers. If you are a parent or guardian and are aware that your child has provided us with personal information, please contact me so that I can take the appropriate action.
+
+     \n\n<b>Changes to This Privacy Policy</b>
+\n\nI reserve the right to make changes to our Privacy Statement at any time. As a result, you should check this page for updates on a regular basis. Any changes will be communicated to you by posting the revised Privacy Policy on this page.
+        \n\nThis policy is effective as of 2023-10-19
+      \n\n<b>Contact Us</b>
+\n\nPlease email me at tipsb160@gmail.com if you have any concerns or recommendations about my Privacy Policy.
+    </string>
+
+    <string name="TermsAndConditions">
+<b>Terms And Conditions</b>
+\n  \nThese terms will automatically apply to you if you download or use the app; consequently, you should read them carefully before using the app. You may not copy or modify the app, any portion of the app, or any of our trademarks in any way. You are not permitted to attempt to extract the apps source code, nor are you permitted to translate the app into other languages or create derivative versions. The app itself, as well as all trademarks, copyright, database rights, and other intellectual property rights associated with it, remain the property of tipsb160@gmail.com.
+tipsb160@gmail.com is dedicated to making the app as functional and efficient as possible. As a result, we reserve the right to make modifications to the
+        \n  \nTo deliver my Service, the Bet Power Sport app keeps and uses personal data that you have submitted to us. It is your duty to keep your phone and app access secure. As a result, we advise you not to jailbreak or root your phone, which is the process of eliminating software restrictions and constraints imposed by your devices official operating system. It may expose your phone to malware/viruses/malicious apps, damage your phones security features, and cause the Bet Power Sport app to stop working properly or at all.
+\n  \nThe app does use third-party services that declare their Terms and Conditions.
+\n  \nLink to Terms and Conditions of third-party service providers used by the app
+        \n  \n \t \t\u2022 <a href="https://policies.google.com/terms">Google Play Services</a>
+\n\t \t\u2022 <a href="https://firebase.google.com/terms/analytics">Google Analytics for Firebase</a>
+\n\t \t\u2022 <a href="https://expo.io/terms">Expo</a>
+\n  \nYou should be informed that there are some things for which tipsb160@gmail.com will not accept responsibility. Certain functionality of the program will necessitate an active internet connection. The connection can be Wi-Fi or provided by your mobile network carrier, but tipsb160@gmail.com cannot be held responsible if you do not have access to Wi-Fi and do not have any of your data allowance remaining.
+\n  \nIf you use the app outside of a Wi-Fi hotspot, keep in mind that the conditions of your mobile network providers agreement will still apply. As a result, your mobile provider may charge you for the cost of data for the duration of the connection while accessing the app, as well as additional third-party expenses. You assume responsibility for any such charges by using the service, including roaming data charges if you use the app outside of your home area (i.e. region or nation) without turning off data roaming.
+       Please be aware that if you are not the bill payer for the device on which you are using the app, we will assume that you have gotten permission from the bill payer to use the app.
+        \n  \nSimilarly, tipsb160@gmail.com cannot always accept responsibility for how you use the software, i.e. You must keep your device charged; if it runs out of battery and you are unable to switch it on to use the Service, tipsb160@gmail.com cannot accept responsibility.
+        \n  \nWith respect to tipsb160@gmail.com’s responsibility for your use of the app, when you’re using the app, it’s important to bear in mind that although we endeavor to ensure that it is updated and correct at all times, we do rely on third parties to provide information to us so that we can make it available to you. tipsb160@gmail.com accepts no liability for any loss, direct or indirect, you experience as a result of relying wholly on this functionality of the app.
+\n  \nWe may want to upgrade the app at some point. The app is now available on Android and iOS; however, the requirements for these systems (and any more systems to which we decide to expand the apps availability) may change, and you will need to download updates if you wish to continue using the app.
+
+tipsb160@gmail.com can not guarantee that the app will always be relevant to you and/or work with the Android and iOS versions that you have installed on your device. However, you pledge to always accept application updates when they are made available to you. We may also wish to discontinue supplying the app and may terminate your usage of it at any time without providing you with notice of termination. Unless we advise you otherwise, any termination will result in (a) the termination of the rights and licenses granted to you in these terms; and (b) you must stop using the app and (if necessary) uninstall it from your device.
+        \n  \n<b>Changes to This Terms and Conditions</b>
+\n  \n I reserve the right to change our Terms and Conditions at any moment. As a result, you should check this page for updates on a regular basis. Any modifications will be communicated to you by posting the revised Terms and Conditions on this page.
+\n  \n These terms and conditions are effective as of 2023-10-19
+        \n  \n<b>Contact Us</b>
+\n  \n If you have any questions or suggestions about my Terms and Conditions, do not hesitate to contact me at tipsb160@gmail.com.
+    </string>
+    <string-array name="navigation_drawer_items_array">
+        <item>Connect</item>
+        <item>Fixtures</item>
+        <item>Table</item>
+    </string-array>
+</resources>

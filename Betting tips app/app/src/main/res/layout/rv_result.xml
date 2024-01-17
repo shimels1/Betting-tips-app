@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/md_grey_700"
+    android:layout_margin="10dp"
+ >
+    <androidx.cardview.widget.CardView
+        android:id="@+id/primeSafeTips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill"
+        android:elevation="6dp"
+        tools:ignore="MissingConstraints">
+    <LinearLayout
+        android:id="@+id/activity_la1nding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+    <LinearLayout
+        android:id="@+id/activity_landinsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="@color/md_grey_900">
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            android:text="21:30"
+            android:textColor="@color/md_blue_grey_50"
+            android:textSize="15dp"  />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:id="@+id/league"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            android:text="Germany: Bundesliga"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/md_blue_grey_50"
+            android:textSize="15dp"  />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            />
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/activity_landing2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:background="@color/md_grey_800">
+
+            <TextView
+                android:id="@+id/club1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.40"
+
+                android:text="Stuttgart"
+                android:textColor="@color/md_blue_grey_50"
+                android:textSize="15dp"  />
+
+            <TextView
+                android:id="@+id/club1_score"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                
+                android:text="0 - 0"
+                android:textAlignment="center"
+                android:textColor="@color/md_blue_grey_50"
+                android:textSize="15dp" 
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/club2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.40"
+                
+                android:text="Darmstadt"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/md_blue_grey_50"
+                android:textSize="15dp"  />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/md_grey_500" />
+
+        <LinearLayout
+            android:id="@+id/activity_lasnding2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:background="@color/md_grey_800">
+
+            <TextView
+                android:id="@+id/prediction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/resource"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="Over 2.5 Foals"
+                android:textAlignment="center"
+                android:textColor="@color/md_green_900"
+                android:textSize="15dp"  />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:id="@+id/odd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:gravity="right"
+                android:text="1.55"
+                android:background="@drawable/odd"
+                android:textColor="@color/black"
+                android:textSize="15dp"  />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <!--    <GridLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:rowCount="3"-->
+<!--        android:columnCount="3"-->
+<!--        android:layout_margin="10dp"-->
+<!--        >-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_rowWeight="0"-->
+<!--            android:layout_columnWeight="0"-->
+<!--            android:text="Tips"-->
+<!--            android:background="@drawable/button"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textAlignment="center"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:paddingLeft="5dp"-->
+<!--            android:paddingRight="5dp"-->
+<!--            android:textColor="@color/md_blue_grey_50"-->
+<!--            />-->
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_rowWeight="0"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:text="Tips"-->
+<!--            android:background="@drawable/button"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textAlignment="center"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:paddingLeft="5dp"-->
+<!--            android:paddingRight="5dp"-->
+<!--            android:textColor="@color/md_blue_grey_50"-->
+<!--            /> <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_rowWeight="0"-->
+<!--        android:layout_columnWeight="2"-->
+<!--        android:text="Tips"-->
+<!--        android:background="@drawable/button"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textAlignment="center"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:paddingLeft="5dp"-->
+<!--        android:paddingRight="5dp"-->
+<!--        android:textColor="@color/md_blue_grey_50"-->
+<!--        />-->
+<!--        -->
+<!--    </GridLayout>-->
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:openDrawer="end"
+    android:id="@+id/drawer_layout">
+    <LinearLayout
+        android:id="@+id/activity_la1nding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        >
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_awesome_toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/black"
+        tools:ignore="MissingConstraints">
+<!--        <ImageView-->
+<!--            android:id="@+id/logo"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:src="@drawable/baseline_menu_24"-->
+<!--            android:layout_marginRight="16dp"-->
+<!--            />-->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Free VIP Tips"
+            android:textColor="@color/md_green_50"
+            android:textSize="@dimen/abc_text_size_title_material"
+            android:fontFamily="sans-serif-medium"
+            />
+        <ImageView
+            android:id="@+id/toggle_imageView"
+            android:layout_gravity="end"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/baseline_menu_24"
+            android:layout_marginRight="16dp"
+            />
+    </androidx.appcompat.widget.Toolbar>
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textSize="40dp"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:gravity="center"-->
+<!--            android:text="Prime Tips"-->
+<!--            android:background="@drawable/bg"/>-->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabIndicatorAnimationMode="elastic"
+        app:tabIndicatorColor="@null"
+        app:tabIndicatorGravity="stretch"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        app:tabIndicatorFullWidth="true"
+        app:tabSelectedTextColor="@color/black"
+        app:tabTextColor="@color/md_blue_grey_100"
+        tools:ignore="MissingConstraints"
+        app:tabPadding="14dp"
+        android:visibility="gone"
+        app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+        >
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/md_red_500"
+            android:text="Free"
+            />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/md_red_500"
+            android:text="VIPa" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+
+    </LinearLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:menu="@menu/nav_menu"
+        android:theme="@style/Base.Theme.Betting.NavigationView"
+        app:itemTextColor="@color/black"
+        android:layout_gravity="end"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>
