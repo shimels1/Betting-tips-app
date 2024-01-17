@@ -1,0 +1,227 @@
+<p-toast></p-toast>
+<div class="container">
+  <div class="field">
+    <label for="name">Catagory</label>
+    <!-- <input type="text" pInputText id="catagory" [(ngModel)]="match.catagory" required autofocus /> -->
+    <p-dropdown [options]="catagorys" [(ngModel)]="selectedCatagory" (onChange)="selectedCat()"
+      optionLabel="name"></p-dropdown>
+    <!-- <small class="p-error" *ngIf="submitted && !match.catagory">Catagory is required.</small> -->
+  </div>
+  <p-card class="m-1">
+    <p-toolbar styleClass="">
+      <ng-template pTemplate="left">
+        <button pButton pRipple label="New" icon="pi pi-plus" class="p-button-success " (click)="openNew()"></button>
+      </ng-template>
+      <ng-template pTemplate="right" class="dateCatContener">
+        <button pButton pRipple *ngIf="dateLists" [disabled]="curentDateIndex == 0" icon="pi pi-angle-left"
+          class="p-button-success" (click)="previous()"></button>
+        <h3 class="date" *ngIf="dateLists.length != 0">{{dateLists[this.curentDateIndex].date | date}}</h3>
+        <button pButton pRipple *ngIf="dateLists" [disabled]="curentDateIndex == this.dateLists.length-1"
+          icon="pi pi-angle-right" class="p-button-success" (click)="next()"></button>
+      </ng-template>
+
+    </p-toolbar>
+    <p-table [value]="matchs" #dt [rows]="10" [paginator]="true" styleClass="p-datatable-sm"
+      [globalFilterFields]="['name']" [rowHover]="true" dataKey="id"
+      currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" [showCurrentPageReport]="true">
+
+      <ng-template pTemplate="header">
+        <tr>
+          <th style="width: 8rem">Date</th>
+          <th style="width: 8rem">Time</th>
+          <th style="width: 8rem">Catagory</th>
+          <th style="width: 8rem">League</th>
+          <th style="width: 8rem">Club1</th>
+          <th style="width: 8rem">Club2</th>
+          <th style="width: 8rem">Club1_score</th>
+          <th style="width: 8rem">Club2_score</th>
+          <th style="width: 8rem">Odd</th>
+          <th style="width: 8rem">Prediction</th>
+          <th style="width: 8rem">Result</th>
+          <th style="width: 8rem">Actions</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-matchs>
+        <tr>
+          <td style="width: 8rem;">{{ matchs.date | date }}</td>
+          <td style="width: 8rem">{{ matchs.time }}</td>
+          <td style="width: 8rem">{{ matchs.catagory }}</td>
+          <td style="width: 8rem">{{ matchs.league }}</td>
+          <td style="width: 8rem">{{ matchs.club1 }}</td>
+          <td style="width: 8rem">{{ matchs.club2 }}</td>
+          <td style="width: 8rem">{{ matchs.club1_score }}</td>
+          <td style="width: 8rem">{{ matchs.club2_score }}</td>
+          <td style="width: 8rem">{{matchs.odd}}</td>
+          <td style="width: 8rem">{{ matchs.prediction }}</td>
+          <td style="width: 8rem">{{ matchs.result }}</td>
+          <td style="width: 8rem">
+            <button pButton pRipple class="p-button-rounded p-button-success p-button-sm "
+              style="padding: 8px;margin: 0;margin-right: 4px;" (click)="editmatch(matchs)"><i class="pi pi-pencil"
+                style="font-size: 1rem"></i></button>
+            <button pButton pRipple class="p-button-rounded p-button-warning" style="padding: 8px;margin-right: 4px;"
+              (click)="deletematch(matchs)"><i class="pi pi-trash" style="font-size: 1rem"></i></button>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </p-card>
+</div>
+
+
+<!-- add new match dialog -->
+<p-dialog [(visible)]="matchDialogsave" [style]="{ width: '450px' }" header="Add New Match Details" [modal]="true"
+  styleClass="p-fluid">
+  <ng-template pTemplate="content">
+    <div class="field">
+      <label for="name">Date</label>
+      <input type="date" pInputText id="date" [(ngModel)]="match.date" required autofocus />
+      <small class="p-error" *ngIf="submitted && !match.date">Date is required.</small>
+    </div>
+    <div class="field">
+      <label for="name">Time</label>
+      <input type="text" pInputText id="time" [(ngModel)]="match.time" required autofocus />
+      <small class="p-error" *ngIf="submitted && !match.time">Time is required.</small>
+    </div>
+    <div class="field">
+      <label for="name">Catagory</label>
+      <!-- <input type="text" pInputText id="catagory" [(ngModel)]="match.catagory" required autofocus /> -->
+      <p-dropdown [options]="catagorys" [(ngModel)]="selectedCatagory" optionLabel="name"></p-dropdown>
+      <small class="p-error" *ngIf="submitted && !match.catagory">Catagory is required.</small>
+    </div>
+    <div class="field">
+      <label for="name">League</label>
+      <p-autoComplete [(ngModel)]="match.league" [suggestions]="selectedLeag" (completeMethod)="filterLeag($event)"
+        autoSelection="false"></p-autoComplete>
+
+      <small class="p-error" *ngIf="submitted && !match.league">League is required.</small>
+    </div>
+
+
+    <div class="field">
+      <label for="name">Club1</label>
+      <p-autoComplete [(ngModel)]="match.club1" [suggestions]="selectedClub1" (completeMethod)="filterClub1($event)"
+        autoSelection="false"></p-autoComplete>
+      <!-- <input type="text" pInputText id="club1" [(ngModel)]="match.club1" required autofocus /> -->
+      <small class="p-error" *ngIf="submitted && !match.club1">Club1 is required.</small>
+    </div>
+    <div class="field">
+      <label for="name">Club2</label>
+      <p-autoComplete [(ngModel)]="match.club2" [suggestions]="selectedClub2" (completeMethod)="filterClub2($event)"
+        autoSelection="false"></p-autoComplete>
+      <!-- <input type="text" pInputText id="club2" [(ngModel)]="match.club2" required autofocus /> -->
+      <small class="p-error" *ngIf="submitted && !match.club2">Club2 is required.</small>
+    </div>
+    <div class="field">
+      <label for="name">Club1_score</label>
+      <input type="number" pInputText id="club1_score" [(ngModel)]="match.club1_score" required autofocus />
+      <small class="p-error" *ngIf="submitted && !match.club1_score">Club1_score is required.</small>
+    </div>
+    <div class="field">
+      <label for="name">Club2_score</label>
+      <input type="number" pInputText id="club2_score" [(ngModel)]="match.club2_score" required autofocus />
+      <small class="p-error" *ngIf="submitted && !match.club2_score">Club2_score is required.</small>
+    </div>
+    <div class="field">
+      <label for="name">Odd</label>
+      <input type="text" pInputText id="odd" [(ngModel)]="match.odd" required autofocus />
+      <small class="p-error" *ngIf="submitted && !match.odd">Odd is required.</small>
+    </div>
+    <div class="field">
+      <label for="name">Prediction</label>
+      <p-autoComplete [(ngModel)]="match.prediction" [suggestions]="selectedPrediction"
+        (completeMethod)="filterPrediction($event)" autoSelection="false"></p-autoComplete>
+      <!-- <input type="text" pInputText id="prediction" [(ngModel)]="match.prediction" required autofocus /> -->
+      <small class="p-error" *ngIf="submitted && !match.prediction">Prediction is required.</small>
+    </div>
+
+
+    <div class="field">
+      <label for="name">Result</label>
+      <input type="text" pInputText id="result" [(ngModel)]="match.result" required autofocus />
+      <small class="p-error" *ngIf="submitted && !match.result">Result is required.</small>
+    </div>
+  </ng-template>
+
+  <ng-template pTemplate="footer">
+    <button pButton pRipple label="Cancel" icon="pi pi-times" class="p-button-text" (click)="hideDialog()"></button>
+    <button pButton pRipple label="Save" icon="pi pi-check" class="p-button-text" (click)="saveMatch()"></button>
+  </ng-template>
+</p-dialog>
+<!-- end new match -->
+
+<!-- update prodact dialog -->
+<p-dialog [(visible)]="matchDialogupdate" [style]="{ width: '450px' }" header="Update Match Details" [modal]="true"
+  styleClass="p-fluid">
+  <ng-template pTemplate="content">
+    <div class="field">
+      <label for="name">Date</label>
+      <input type="date" pInputText id="date" [(ngModel)]="match.date" required autofocus />
+      <small class="p-error" *ngIf="submitted && !match.date">Date is required.</small>
+    </div>
+    <div class="field">
+      <label for="name">Time</label>
+      <input type="text" pInputText id="time" [(ngModel)]="match.time" required autofocus />
+      <small class="p-error" *ngIf="submitted && !match.time">Time is required.</small>
+    </div>
+    <div class="field">
+      <label for="name">Catagory</label>
+      <!-- <input type="text" pInputText id="catagory" [(ngModel)]="match.catagory" required autofocus /> -->
+      <p-dropdown [options]="catagorys" [(ngModel)]="selectedCatagory" optionLabel="name"></p-dropdown>
+      <small class="p-error" *ngIf="submitted && !match.catagory">Catagory is required.</small>
+    </div>
+    <div class="field">
+      <label for="name">League</label>
+      <p-autoComplete [(ngModel)]="match.league" [suggestions]="selectedLeag" (completeMethod)="filterLeag($event)"
+        autoSelection="false"></p-autoComplete>
+
+      <small class="p-error" *ngIf="submitted && !match.league">League is required.</small>
+    </div>
+    <div class="field">
+      <label for="name">Club1</label>
+      <input type="text" pInputText id="club1" [(ngModel)]="match.club1" required autofocus />
+      <small class="p-error" *ngIf="submitted && !match.club1">Club1 is required.</small>
+    </div>
+    <div class="field">
+      <label for="name">Club2</label>
+      <input type="text" pInputText id="club2" [(ngModel)]="match.club2" required autofocus />
+      <small class="p-error" *ngIf="submitted && !match.club2">Club2 is required.</small>
+    </div>
+    <div class="field">
+      <label for="name">Club1_score</label>
+      <input type="number" pInputText id="club1_score" [(ngModel)]="match.club1_score" required autofocus />
+      <small class="p-error" *ngIf="submitted && !match.club1_score">Club1_score is required.</small>
+    </div>
+    <div class="field">
+      <label for="name">Club2_score</label>
+      <input type="number" pInputText id="club2_score" [(ngModel)]="match.club2_score" required autofocus />
+      <small class="p-error" *ngIf="submitted && !match.club2_score">Club2_score is required.</small>
+    </div>
+    <div class="field">
+      <label for="name">Odd</label>
+      <input type="text" pInputText id="odd" [(ngModel)]="match.odd" required autofocus />
+      <small class="p-error" *ngIf="submitted && !match.odd">Odd is required.</small>
+    </div>
+    <div class="field">
+      <label for="name">Prediction</label>
+      <input type="text" pInputText id="prediction" [(ngModel)]="match.prediction" required autofocus />
+      <small class="p-error" *ngIf="submitted && !match.prediction">Prediction is required.</small>
+    </div>
+
+
+    <div class="field">
+      <label for="name">Result</label>
+      <input type="text" pInputText id="result" [(ngModel)]="match.result" required autofocus />
+      <small class="p-error" *ngIf="submitted && !match.result">Result is required.</small>
+    </div>
+  </ng-template>
+
+  <ng-template pTemplate="footer">
+    <button pButton pRipple label="Cancel" icon="pi pi-times" class="p-button-text" (click)="hideDialog()"></button>
+    <button pButton pRipple label="Save" icon="pi pi-check" class="p-button-text" (click)="updateMatch()"></button>
+  </ng-template>
+</p-dialog>
+<!-- end new match -->
+
+
+
+<p-confirmDialog [style]="{ width: '450px' }"></p-confirmDialog>

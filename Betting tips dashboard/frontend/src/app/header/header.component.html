@@ -1,0 +1,16 @@
+<p-menubar class="mr-2">
+    <ng-template pTemplate="start">
+        <span height="40" class="mr-2" style="font-size: 25px;font-weight: 600;margin-top: 20px;">CRUD</span>
+    </ng-template>
+    <ng-template pTemplate="end">
+        <a *ngIf="isLogin==true" [routerLink]="['free']" routerLinkActive="active" style="font-size: 18px;font-weight: 400;margin-top: 20px;margin-right: 25px;
+            text-decoration: none;" [routerLinkActiveOptions]="{exact:true}">Free</a>
+
+        <a *ngIf="isLogin==true" [routerLink]="['vip']" style="font-size: 18px;font-weight: 400;margin-top: 20px;margin-right: 25px;
+            text-decoration: none;" routerLinkActive="active">VIP</a>
+        <a *ngIf="isLogin==true" (click)="logout()" style="font-size: 18px;font-weight: 400;margin-top: 20px;margin-right: 25px;
+            text-decoration: none;" routerLinkActive="active">Logout</a>
+
+    </ng-template>
+
+</p-menubar>
